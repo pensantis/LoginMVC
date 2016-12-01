@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - loginmvc@localhost" uuid="d00d3d65-a6b9-4962-9658-1c5b1a68eef6">
+    <database-info product="MySQL" version="5.7.11" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="loginmvc"/>
+      <table id="2" parent="1" name="users"/>
+      <column id="3" parent="2" name="username">
+        <mandatory>1</mandatory>
+        <data-type>char(15)</data-type>
+      </column>
+      <column id="4" parent="2" name="email">
+        <mandatory>1</mandatory>
+        <data-type>char(30)</data-type>
+      </column>
+      <column id="5" parent="2" name="password">
+        <mandatory>1</mandatory>
+        <data-type>char(20)</data-type>
+      </column>
+      <index id="6" parent="2" name="users_email_uindex">
+        <columns>email</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="7" parent="2" name="PRIMARY">
+        <columns>username</columns>
+        <primary>1</primary>
+      </key>
+      <key id="8" parent="2" name="users_email_uindex">
+        <columns>email</columns>
+        <underlying-index>users_email_uindex</underlying-index>
+      </key>
+    </database-model>
+  </data-source>
+</component>
