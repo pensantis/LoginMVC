@@ -41,11 +41,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/academiadecodigo/loginmvcmaven/service/user/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="336">
               <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/academiadecodigo/loginmvcmaven/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -66,16 +76,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
               <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HibernateRoleDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/academiadecodigo/loginmvcmaven/model/dao/hibernate/HibernateRoleDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -1080,12 +1080,12 @@
       <workItem from="1479401993593" duration="3196000" />
       <workItem from="1480332014806" duration="20782000" />
       <workItem from="1480586540490" duration="7598000" />
-      <workItem from="1480607674899" duration="3106000" />
+      <workItem from="1480607674899" duration="3222000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34682000" />
+    <option name="totallyTimeSpent" value="34798000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -1144,28 +1144,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/academiadecodigo/loginmvcmaven/service/user/JdbcUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1480610988000" expanded="true" signature="949:1055" placeholder="SELECT usern... users" />
-            <marker date="1480610988000" expanded="true" signature="2080:2134" placeholder="INSERT INTO users... " />
-            <marker date="1480610988000" expanded="true" signature="2080:2165" placeholder="INSERT INTO users... " />
-            <marker date="1480610988000" expanded="true" signature="2080:2196" placeholder="INSERT INTO users... " />
-            <marker date="1480610988000" expanded="true" signature="2080:2198" placeholder="INSERT INTO users... " />
-            <marker date="1480610988000" expanded="true" signature="2080:2224" placeholder="INSERT INTO users... " />
-            <marker date="1480610988000" expanded="true" signature="2816:2879" placeholder="SELECT usern... users" />
-            <marker date="1480610988000" expanded="true" signature="2816:2887" placeholder="SELECT usern... users" />
-            <marker date="1480610988000" expanded="true" signature="2816:2893" placeholder="SELECT usern... users" />
-            <marker date="1480610988000" expanded="true" signature="3600:3645" placeholder="SELECT COUNT... users" />
-            <marker date="1480610988000" expanded="true" signature="3600:3646" placeholder="SELECT COUNT... users" />
-            <marker date="1480610988000" expanded="true" signature="4334:4394" placeholder="SELECT usern... users" />
-            <marker date="1480610988000" expanded="true" signature="4334:4395" placeholder="SELECT usern... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/academiadecodigo/loginmvcmaven/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
@@ -1578,6 +1556,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/academiadecodigo/loginmvcmaven/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
