@@ -6,29 +6,17 @@ import org.academiadecodigo.loginmvcmaven.model.User;
 import org.academiadecodigo.loginmvcmaven.model.dao.UserDao;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
-import org.hibernate.Session;
 
 /**
  * Created by codecadet on 01/12/16.
  */
-public class HibernateUserDao implements UserDao {
-    @Override
-    public void save(User user) {
-        try {
-            HibernateSessionManager.getSession().save(user);
-        } catch (HibernateException ex) {
-            throw new TransactionException(ex);
-        }
+public class HibernateUserDao extends HibernateDao<User> implements UserDao {
+
+    public HibernateUserDao() {
+        super(User.class);
     }
 
-    @Override
-    public void delete(User user) {
-        try {
-            HibernateSessionManager.getSession().delete(user);
-        } catch (HibernateException ex) {
-            throw new TransactionException(ex);
-        }
-    }
+
 
     @Override
     public User findByName(String username) {
@@ -43,16 +31,7 @@ public class HibernateUserDao implements UserDao {
         }
     }
 
-    @Override
-    public long count() {
-        try {
-            return HibernateSessionManager.getSession()
-                    .createQuery("select count (*) from " + User.class.getSimpleName())
-                    .list().size();
-        } catch (HibernateException ex) {
-            throw new TransactionException(ex);
-        }
-    }
+
 
     @Override
     public boolean userExist(String name) {

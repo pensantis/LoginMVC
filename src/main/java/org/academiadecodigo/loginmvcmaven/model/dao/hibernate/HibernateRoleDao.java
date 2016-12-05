@@ -3,34 +3,31 @@ package org.academiadecodigo.loginmvcmaven.model.dao.hibernate;
 import org.academiadecodigo.loginmvcmaven.Persistence.TransactionException;
 import org.academiadecodigo.loginmvcmaven.Persistence.hibernate.HibernateSessionManager;
 import org.academiadecodigo.loginmvcmaven.model.Role;
+import org.academiadecodigo.loginmvcmaven.model.User;
 import org.academiadecodigo.loginmvcmaven.model.dao.RoleDao;
 import org.hibernate.HibernateException;
+import org.hibernate.Query;
 
 /**
  * Created by codecadet on 01/12/16.
  */
-public class HibernateRoleDao implements RoleDao {
+public class HibernateRoleDao extends HibernateDao<Role> implements RoleDao {
+
+    public HibernateRoleDao() {
+        super(Role.class);
+    }
+
     @Override
-    public void save(Role role) {
+    public Role findByName(String rolename) {
         try {
-            HibernateSessionManager.getSession().save(role);
+            Query query = HibernateSessionManager.getSession().createQuery("from Role where name = :name");
+
+            query.setString("name", rolename);
+            return (Role) query.uniqueResult();
+
         } catch (HibernateException ex) {
             throw new TransactionException(ex);
         }
     }
 
-    @Override
-    public void delete(Role role) {
-
-    }
-
-    @Override
-    public Role findByName(String rolename) {
-        return null;
-    }
-
-    @Override
-    public long count() {
-        return 0;
-    }
 }
