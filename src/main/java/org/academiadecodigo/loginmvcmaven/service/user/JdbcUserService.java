@@ -114,7 +114,7 @@ public class JdbcUserService extends AbstractUserService {
     }
 
     @Override
-    public int count() {
+    public long count() {
         int result = 0;
 
         try {

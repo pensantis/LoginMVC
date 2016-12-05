@@ -1,12 +1,17 @@
 package org.academiadecodigo.loginmvcmaven.model;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Created by codecadet on 15/11/16.
  */
 public class User {
+    private int id;
     private String username;
     private String password;
     private String email;
+    private Set<Role> roles = new HashSet<>();
 
     public User(String username, String password, String email) {
         this.username = username;
@@ -39,5 +44,21 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

@@ -29,7 +29,7 @@ public class HibernateSessionManager {
         }
     }
 
-    private static Session getSession() {
+    public static Session getSession() {
         // Hibernate will automatically open a new session if needed
         // Closing the session is not required
         return sessionFactory.getCurrentSession();

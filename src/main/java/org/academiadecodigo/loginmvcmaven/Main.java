@@ -5,11 +5,15 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.stage.Stage;
+import org.academiadecodigo.loginmvcmaven.Persistence.hibernate.HibernateTransactionManager;
 import org.academiadecodigo.loginmvcmaven.Persistence.jdbc.ConnectionManager;
+import org.academiadecodigo.loginmvcmaven.model.dao.hibernate.HibernateRoleDao;
+import org.academiadecodigo.loginmvcmaven.model.dao.hibernate.HibernateUserDao;
 import org.academiadecodigo.loginmvcmaven.service.Service;
 import org.academiadecodigo.loginmvcmaven.service.ServiceRegistry;
 import org.academiadecodigo.loginmvcmaven.service.user.HibernateUserService;
 import org.academiadecodigo.loginmvcmaven.service.user.UserService;
+import org.academiadecodigo.loginmvcmaven.service.user.UserServiceImplementation;
 
 /**
  * Created by codecadet on 15/11/16.
@@ -28,18 +32,17 @@ public class Main extends Application {
     @Override
     public void init() {
 
-        /*userService = new UserServiceImplementation(
+        userService = new UserServiceImplementation(
                 new HibernateUserDao(),
                 new HibernateRoleDao(),
                 new HibernateTransactionManager());
         ServiceRegistry.getServiceRegistry()
-                .registerService(UserService.class.getSimpleName()),
-        userService);*/
+                .addService(userService);
 
 
-        Service userService = new HibernateUserService();
+       // Service userService = new HibernateUserService();
 
-        ServiceRegistry.getServiceRegistry().addService(userService);
+       // ServiceRegistry.getServiceRegistry().addService(userService);
 
     }
 

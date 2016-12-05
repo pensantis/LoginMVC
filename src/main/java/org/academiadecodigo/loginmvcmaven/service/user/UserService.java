@@ -10,7 +10,7 @@ public interface UserService extends Service{
     boolean authenticate(String name, String password);
     void addUser(User user);
     User findByName(String name);
-    int count();
+    long count();
     public boolean userExist(String name);
 }
 

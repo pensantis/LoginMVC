@@ -11,12 +11,15 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import org.academiadecodigo.loginmvcmaven.Navigation;
+import org.academiadecodigo.loginmvcmaven.model.Role;
 import org.academiadecodigo.loginmvcmaven.model.User;
 import org.academiadecodigo.loginmvcmaven.service.ServiceRegistry;
 import org.academiadecodigo.loginmvcmaven.service.user.UserService;
 
 import java.net.URL;
+import java.util.HashSet;
 import java.util.ResourceBundle;
+import java.util.Set;
 
 
 /**
@@ -181,7 +184,12 @@ public class LoginController  implements Initializable {
             }
         }
 
-        userService.addUser(new User(userText.getText(), passText.getText(), emailText.getText()));
+        User user = new User(userText.getText(), passText.getText(), emailText.getText());
+        Set<Role> roles = new HashSet<>();
+        roles.add(new Role("user"));
+        user.setRoles(roles);
+
+        userService.addUser(user);
         info.setText("Registered with Success");
         info.setTextFill(Color.GREEN);
         info.setVisible(true);

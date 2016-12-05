@@ -86,7 +86,7 @@ public class HibernateUserService extends AbstractUserService {
     }
 
     @Override
-    public int count() {
+    public long count() {
         int result = 0;
         try {
             Session session = HibernateSessionManager.beginTransaction();

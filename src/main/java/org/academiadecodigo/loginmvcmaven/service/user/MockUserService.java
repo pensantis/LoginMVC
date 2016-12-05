@@ -43,7 +43,7 @@ public class MockUserService extends AbstractUserService {
     }
 
     @Override
-    public int count() {
+    public long count() {
         return users.size();
     }
 
